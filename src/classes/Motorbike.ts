@@ -19,7 +19,7 @@ class Motorbike extends Vehicle {
 
   // TODO: Create a constructor that accepts the properties of the Motorbike class
   constructor(
-    vin: string,
+  vin: string,
   color: string,
   make: string,
   model: string,
@@ -27,6 +27,8 @@ class Motorbike extends Vehicle {
   weight: number,
   topSpeed: number,
   wheels: Wheel[],
+  // started: boolean,
+  // currentSpeed: number,
 ) {
     // TODO: The constructor should call the constructor of the parent class, Vehicle
     super();
@@ -39,24 +41,27 @@ class Motorbike extends Vehicle {
     this.weight = weight;
     this.topSpeed = topSpeed;
     this.wheels = wheels;
+    // this.started = started;
+    // this.currentSpeed = currentSpeed;
+
     // TODO: The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
-  if (wheels.length !== 4) {
-    this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
+  if (wheels.length !== 2) {
+    this.wheels = [new Wheel(), new Wheel()];
   } else {
     this.wheels = wheels;
   }
 }
 
-  // TODO: Implement the wheelie method
+// TODO: Implement the wheelie method
+wheelie(): void {
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
-
-          //console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`);
-
+    console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`);
+  }
   // TODO: Override the printDetails method from the Vehicle class
   override printDetails(): void {
     // TODO: The method should call the printDetails method of the parent class
     super.printDetails();
-    // TODO: The method should log the details of the Motorbike
+    // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
     console.log(`VIN: ${this.vin}`);
     console.log(`Color: ${this.color}`);
     console.log(`Make: ${this.make}`);
@@ -64,8 +69,9 @@ class Motorbike extends Vehicle {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
-    // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
-    console.log(`Wheel 1: ${}`)
+    // TODO: The method should log the details of the Motorbike
+    console.log(`Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`);
+    console.log(`Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`);
   }
 }
 
