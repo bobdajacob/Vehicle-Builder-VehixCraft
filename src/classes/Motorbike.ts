@@ -1,5 +1,4 @@
 // Importing Vehicle and Wheel classes
-import AbleToTow from '../interfaces/AbleToTow.js';
 import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
 
@@ -69,6 +68,7 @@ wheelie(): void {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
+    
     // TODO: The method should log the details of the Motorbike
     console.log(`Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`);
     console.log(`Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`);

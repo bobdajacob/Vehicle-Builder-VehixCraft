@@ -31,7 +31,9 @@ class Truck extends Vehicle implements AbleToTow {
     wheels: Wheel[],
     towingCapacity: number,
   ) {
+    // TODO: The constructor should call the constructor of the parent class, Vehicle
     super ();
+    // TODO: The constructor should initialize the properties of the Truck class
     this.vin = vin;
     this.color = color;
     this.make = make;
@@ -48,23 +50,41 @@ class Truck extends Vehicle implements AbleToTow {
       this.wheels = wheels;
     }
 }
-    // TODO: The constructor should call the constructor of the parent class, Vehicle
-
-    // TODO: The constructor should initialize the properties of the Truck class
-
-
   // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
     // TODO: Get the make an model of the vehicle if it exists
+    if (vehicle.make && vehicle.model) {
+      console.log(`Towing vehicle: ${vehicle.make} ${vehicle.model}`);
+    } else {
+      console.log(`The vehicle make and model are not available`);
+    }
     // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
-    // TODO: If it is, log that the vehicle is being towed
-    // TODO: If it is not, log that the vehicle is too heavy to be towed
+    if (vehicle.weight <= this.towingCapacity) {
+      // TODO: If it is, log that the vehicle is being towed
+      console.log(`The vehicle is being towed`);
+    } else {
+      // TODO: If it is not, log that the vehicle is too heavy to be towed
+      console.log(`The vehicle is too heavy to be towed`);
+    }
   }
-
   // TODO: Override the printDetails method from the Vehicle class
+  override printDetails(): void {
     // TODO: The method should call the printDetails method of the parent class
+    super.printDetails();
     // TODO: The method should log the details of the Truck
+
     // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
+    console.log(`VIN: ${this.vin}`);
+    console.log(`Color: ${this.color}`);
+    console.log(`Make: ${this.make}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`Year: ${this.year}`);
+    console.log(`Weight: ${this.weight}`);
+    console.log(`Top Speed: ${this.topSpeed}`);
+    console.log(`Towing Capacity: ${this.towingCapacity}`);
+    console.log(`Wheels: ${this.wheels}`);
+
+  }
 }
 
 // Export the Truck class as the default export
