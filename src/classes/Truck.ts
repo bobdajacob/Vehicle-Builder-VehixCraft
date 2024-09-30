@@ -82,7 +82,8 @@ class Truck extends Vehicle implements AbleToTow {
     console.log(`Weight: ${this.weight}`);
     console.log(`Top Speed: ${this.topSpeed}`);
     console.log(`Towing Capacity: ${this.towingCapacity}`);
-    console.log(`Wheels: ${this.wheels}`);
+    console.log(`Wheels: ${this.wheels[0].getDiameter}`);
+    console.log(`Wheels: ${this.wheels[0].getTireBrand}`);
 
     console.log(
       `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
