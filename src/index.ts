@@ -36,7 +36,18 @@ vehicles.push(car1);
 vehicles.push(motorbike1);
 
 // create a new instance of the Cli class
-const cli = new Cli(vehicles);
+const cli = new Cli(
+  vehicles,
+  Cli.generateVin(),
+  'blue',
+  'Toyota',
+  'Camry',
+  2021,
+  3000,
+  130,
+  [],
+  5000,
+);
 
 // start the cli
 cli.startCli();
