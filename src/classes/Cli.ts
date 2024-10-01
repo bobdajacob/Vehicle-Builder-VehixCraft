@@ -27,7 +27,7 @@ class Cli {
   exit: boolean = false;
 
   // ✅TODO: Update the constructor to accept Truck and Motorbike objects as well
-  constructor(vehicles: (Car)[], vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, wheels: Wheel[], towingCapacity: number) {
+  constructor(vehicles: (Car | Motorbike | Car)[], vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, wheels: Wheel[], towingCapacity: number) {
     this.vehicles = vehicles;
     this.vin = vin;
     this.color = color;

@@ -20,6 +20,9 @@ The technologies that are used for this project are JavaScript/TypeScript, Node.
     ```bash
    npm run start
 
+# Walkthrough Video Link
+https://drive.google.com/file/d/1YL89SxlIIW4OPR6H25KgI3vgPGze1Wnd/view
+
 # Features
 * Create new vehicles and selecting existing ones by specifying make, model, year, and other properties.
 * Perform vehicle specific actions
